@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.demo-content {
+	width: 768px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#rangeBarPosition{
+    margin:30px 0;
+}
+
+
+/*Overwrite UI Slider*/
+
+.ui-slider.ui-slider-horizontal {
+	height: 80px;
+	border-color: #ccc;
+}
+
+.ui-slider .ui-state-default {
+	width: 18px;
+	height: 90px;
+	border-radius: 5px;
+	background-color: #f6873f;
+	border: none;
+	margin: -1px 0 0 -5px;
+	outline: none;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.ui-slider .ui-state-default::after {
+	content: '';
+	width: 5px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.ui-slider .ui-slider-range {
+	background-color: transparent;
+	border-radius: 5px;
+	border: solid 3px #f6873f;
+	z-index: 99;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+.ui-slider .ui-slider-range::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: rgb(0 0 0 / 0.5);
+	z-index: 999;
+}
+
+.rangeBarBg {
+	background-color: rgb(0 0 0 / 0.4);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 9999;
+}
+
+.rangeBarBg.left {
+	left: 0;
+	width: calc(34% - 5px); /*Starting Position*/
+}
+
+.rangeBarBg.right {
+	right: 0;	
+	width: calc(36% - 13px); /*Starting Position*/
+}
